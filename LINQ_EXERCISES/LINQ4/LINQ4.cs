@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace LINQ4
 {
-    class Program
+    class LINQ4
     {
         static void Main(string[] args)
         {
