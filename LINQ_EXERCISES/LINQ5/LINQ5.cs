@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace LINQ5
 {
-    class Program
+    class LINQ5
     {
         static void Main(string[] args)
         {
