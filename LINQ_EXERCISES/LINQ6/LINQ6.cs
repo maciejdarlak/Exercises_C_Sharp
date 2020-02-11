@@ -8,7 +8,7 @@ using System.Linq;
 
 namespace LINQ6
 {
-    class Program
+    class LINQ6
     {
         static void Main(string[] args)
         {
