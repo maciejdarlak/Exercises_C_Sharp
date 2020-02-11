@@ -1,3 +1,6 @@
+//Write a program in C# Sharp to shows how the three parts of a query operation execute.
+
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -47,5 +50,12 @@ class Program
             Console.WriteLine(item.Brand + " " +  item.Model);          
         }
         Console.ReadKey();
+    }
+
+    class Car
+    {
+        public int Id { get; set; }
+        public string Brand { get; set; }
+        public string Model { get; set; }
     }
 }
