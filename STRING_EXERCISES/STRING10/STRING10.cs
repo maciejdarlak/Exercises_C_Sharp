@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace STRING1
+namespace STRING10
 {
-    class STRING1
+    class STRING10
     {
         static void Main(string[] args)
         {
