@@ -7,7 +7,7 @@ using System.Linq;
 
 namespace LINQ3
 {
-    class LINQ3
+    class LINQ03
     {
         static void Main(string[] args)
         {

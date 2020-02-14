@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace LINQ07
+namespace LINQ09
 {
-    class Program
+    class LINQ09
     {
         static void Main(string[] args)
         {
