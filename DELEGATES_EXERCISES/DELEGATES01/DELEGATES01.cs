@@ -5,9 +5,9 @@
 // Now we can add them or anything else
 // If we want to have different values in 2 delegates, we must create 2 delegate objects
 
-namespace DELEGATES1
+namespace DELEGATES01
 {
-    class DELEGATES1
+    class DELEGATES01
     {
         static void Main(string[] args)
         {
