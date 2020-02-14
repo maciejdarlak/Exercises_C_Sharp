@@ -13,6 +13,7 @@ namespace LINQ08
         {
             string a = "ALICE has a nice CAT";
             var b = a.Split(' ').Where(a => a == a.ToUpper());
+
             foreach (var item in b)
             {
                 Console.WriteLine(item);
