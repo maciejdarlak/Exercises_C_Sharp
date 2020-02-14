@@ -1,4 +1,4 @@
-//Write a program in C# Sharp to shows how the three parts of a query operation execute.
+﻿//Write a program in C# Sharp to shows how the three parts of a query operation execute.
 
 
 using System;
@@ -9,7 +9,7 @@ using System.Linq;
 // Then select the list for our conditions
 // Then use foreach to print each item in the list
 
-class Program
+class LINQ01
 {
     static void Main(string[] args)
     {
@@ -43,11 +43,11 @@ class Program
         list.Add(new Car { Id = 5, Brand = "Pontiac", Model = "GTO" });
 
         var sortedList = list.Select(a => a).Where(b => b.Id < 4).OrderBy(c => c.Id).ToArray();
-                         
+
 
         foreach (var item in sortedList)
         {
-            Console.WriteLine(item.Brand + " " +  item.Model);          
+            Console.WriteLine(item.Brand + " " + item.Model);
         }
         Console.ReadKey();
     }
