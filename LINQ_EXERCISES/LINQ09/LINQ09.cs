@@ -13,7 +13,7 @@ namespace LINQ09
     {
         static void Main(string[] args)
         {
-            string[] array = new string[] { "cat", "hamster", "dog", "lion" };
+            string[] array = { "cat", "hamster", "dog", "lion" };
             var x = String.Join("' ", array.Select(a => a.ToString()).ToArray());
             Console.WriteLine(x);
             Console.Read();
