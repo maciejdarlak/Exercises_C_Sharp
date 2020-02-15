@@ -4,7 +4,7 @@ using System;
 using System.Linq;
 using System.Collections.Generic;
 
-
+//The Split (' ') method splits a string into words
 namespace LINQ08
 {
     class LINQ08
