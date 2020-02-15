@@ -25,6 +25,12 @@ namespace LINQ10
 
             Console.WriteLine("Which maximum grade point you want to find?");
             int x = int.Parse(Console.ReadLine());
+
+            /*  Linq selection:
+                OrderByDescending() - arranging the collection from the highest to the lowest value by GrPoint
+                Take() - select x first values
+                ToList() - create a new list */
+
             var newStuList = stuList.OrderByDescending(a => a.GrPoint).Take(x).ToList();
             foreach (var item in newStuList)
             {
