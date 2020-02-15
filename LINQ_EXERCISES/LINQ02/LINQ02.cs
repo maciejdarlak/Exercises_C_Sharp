@@ -14,7 +14,7 @@ namespace LINQ2
     {
         static void Main(string[] args)
         {
-            List<Car> naszePojazdy = new List<Car>()
+            List<Car> ourCars = new List<Car>()
         {
             new Car("Audi A6 Quatro", Car.Type.NormalCar, 360000, "Black"),
             new Car("Mercedes Benz", Car.Type.NormalCar, 390000, "White"),
@@ -23,7 +23,7 @@ namespace LINQ2
             new Car("Ford Mondeo", Car.Type.NormalCar, 70000, "Black"),
         };
 
-            var selectedCars = naszePojazdy.Select(a => a).Where(a => a.Prize < 200000).Where(a => a.Color == "Black").Where(a => a.CarType == Car.Type.NormalCar).OrderBy(a => a.Prize).ToList();
+            var selectedCars = ourCars.Select(a => a).Where(a => a.Prize < 200000).Where(a => a.Color == "Black").Where(a => a.CarType == Car.Type.NormalCar).OrderBy(a => a.Prize).ToList();
 
             foreach (var item in selectedCars)
             {
