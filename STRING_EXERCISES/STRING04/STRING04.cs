@@ -1,4 +1,4 @@
-﻿//Write a C# Sharp program to compare the current string instance with another string. 
+﻿//Write a C # program to check if the positive number is a multiple of 3 or a multiple of 7.
 
 using System;
 

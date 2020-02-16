@@ -1,4 +1,5 @@
-﻿//Write a C# Sharp program to compare a given string with set of strings. 
+﻿/*Write a C # program to create a new string of four copies, taking the last four characters of the given string. 
+ * If the length of a given string is less than 4, return the original.*/
 
 using System;
 

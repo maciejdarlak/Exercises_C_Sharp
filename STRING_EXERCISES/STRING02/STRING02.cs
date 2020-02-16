@@ -1,6 +1,4 @@
-﻿//Write a C# Sharp program to perform and ordinal comparison of two strings that only differ in case.
-
-using System;
+﻿using System;
 
 
 namespace STRING02

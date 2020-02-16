@@ -1,5 +1,4 @@
 ﻿//Write a C# Sharp program to compare two strings in following three different ways produce three different results
-
 //Break the sentence into words (including spaces) and arrange from the end
 
 using System;
