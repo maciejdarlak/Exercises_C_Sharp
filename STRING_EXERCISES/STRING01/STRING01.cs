@@ -4,6 +4,8 @@
 
 using System;
 
+//The sentence was broken into words (including spaces) and arranged from the end.
+
 namespace STRING01
 {
     class STRING01
