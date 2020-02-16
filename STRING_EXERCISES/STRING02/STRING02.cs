@@ -2,6 +2,7 @@
 
 using System;
 
+
 namespace STRING02
 {
     class STRING02
