@@ -1,0 +1,21 @@
+﻿@model TAG_HELPERS_01.Models.Movie
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@Model.Title</title>
+</head>
+<body>
+
+    The movie <b>@Model.Title</b> was released @Model.ReleaseDate.ToLongDateString()
+
+    <input class="form-control" asp-for="Title" /> <!-- Asp-for - access to model properties-->
+
+    <form method="Index" asp-controller="Index" asp-action="Index"></form>
+</body>
+</html>
