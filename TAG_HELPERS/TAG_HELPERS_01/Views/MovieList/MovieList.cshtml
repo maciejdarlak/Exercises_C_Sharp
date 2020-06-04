@@ -1,8 +1,18 @@
-﻿
+﻿@model TAG_HELPERS_01.Models.MovieSimple
 @{
-    ViewData["Title"] = "MovieList";
+    Layout = null;
 }
 
-<h1>MovieList</h1>
+<!DOCTYPE html>
 
-<form method="post" asp-controller="MovieList" asp-action="MovieList"></form> 
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@Model._Title</title>
+</head>
+<body>
+
+    <form method="post" asp-controller="MovieList" asp-action="MovieList"></form>
+
+</body>
+</html>
