@@ -11,7 +11,16 @@
 </head>
 <body>
 
-    <form asp-controller="MovieList" asp-action="MovieList"></form>
+ 
+
+    <form asp-action="MovieList" method="post">
+        <input asp-for="ListTitle" placeholder="First name" />
+        <input asp-for="ListTitle" placeholder="Last name" />
+
+        <select asp-items="@(new SelectList(Model.movies))" asp-for="ListTitle"></select>
+
+        <input type="submit" value="Save" />
+    </form>
 
 </body>
 </html>
