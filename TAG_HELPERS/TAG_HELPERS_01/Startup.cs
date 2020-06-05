@@ -50,7 +50,7 @@ namespace TAG_HELPERS_01
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Index}/{action=Index}/{id?}");
+                    pattern: "{controller=Movie}/{action=Movie}/{id?}");
             });
         }
     }

@@ -7,9 +7,9 @@ using TAG_HELPERS_01.Models;
 
 namespace TAG_HELPERS_01.Controllers
 {
-    public class IndexController : Controller
+    public class MovieController : Controller
     {
-        public IActionResult Index()
+        public IActionResult Movie()
         {
             Movie movie = new Movie()
             {

@@ -12,10 +12,30 @@
 </head>
 <body>
 
+    RELEASEDATE
     The movie <b>@Model.Title</b> was released @Model.ReleaseDate.ToLongDateString()
+    <hr />
 
+    INPUT
     <input class="form-control" asp-for="Title" /> <!-- Asp-for - access to model properties-->
+    <hr />
 
-    <form method="Index" asp-controller="Index" asp-action="Index"></form>
+    LABEL&INPUT
+    <label asp-for="Title"></label>
+    <input asp-for="Title" />
+    <hr />
+
+    TEXTAREA
+    <textarea asp-for="Title"></textarea>
+    <hr />
+
+    TEXTAREA
+    <textarea asp-for="Title" cols="25" rows="3"></textarea>
+    <hr />
+
+    TEXTAREA
+    <textarea asp-for="Title" style="height: 40px; width: 200px;"></textarea>
+    <hr />
+
 </body>
 </html>

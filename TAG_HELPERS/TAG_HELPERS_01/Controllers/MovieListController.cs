@@ -11,12 +11,13 @@ namespace TAG_HELPERS_01.Controllers
     {
         public IActionResult MovieList()
         {
-            var movieList = new List<MovieSimple>();
-            movieList.Add(new MovieSimple("1"));
-            movieList.Add(new MovieSimple("2"));
-            movieList.Add(new MovieSimple("3"));
-            movieList.Add(new MovieSimple("4"));
-            return View(movieList);
+            MovieList x = new MovieList() { Title = "1" };
+            List<MovieList> movies = new List<MovieList>();
+            movies.Add(new MovieList() { Title = "1" });
+            movies.Add(new MovieList() { Title = "2" });
+            movies.Add(new MovieList() { Title = "3" });
+            movies.Add(new MovieList() { Title = "4" });
+            return View();
         }
     }
-    }
+}

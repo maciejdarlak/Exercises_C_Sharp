@@ -1,4 +1,4 @@
-﻿@model TAG_HELPERS_01.Models.MovieSimple
+﻿@model TAG_HELPERS_01.Models.MovieListViewModel
 @{
     Layout = null;
 }
@@ -8,11 +8,10 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>@Model._Title</title>
 </head>
 <body>
 
-    <form method="post" asp-controller="MovieList" asp-action="MovieList"></form>
+    <form asp-controller="MovieList" asp-action="MovieList"></form>
 
 </body>
 </html>
