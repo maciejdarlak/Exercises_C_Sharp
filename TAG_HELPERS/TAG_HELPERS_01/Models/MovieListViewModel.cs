@@ -9,7 +9,7 @@ namespace TAG_HELPERS_01.Models
 {
     public class MovieListViewModel
     {
-        public List<Movie> movies { get; set; }
-        public string ListTitle { get; set; }
+        public List<Movie> Movies { get; set; }
+        public MovieUser MovieUser { get; set; }
     }
 }

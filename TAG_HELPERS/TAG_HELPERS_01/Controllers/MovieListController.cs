@@ -13,13 +13,13 @@ namespace TAG_HELPERS_01.Controllers
         {
             MovieListViewModel viewModel = new MovieListViewModel();
 
-            viewModel.ListTitle = "Best List";
+            viewModel.MovieUser = new MovieUser() { FirstName = "John", LastName = "Smith", Movie = "1"};
 
-            viewModel.movies = new List<Movie>();
-            viewModel.movies.Add(new Movie() { Title = "1" });
-            viewModel.movies.Add(new Movie() { Title = "2" });
-            viewModel.movies.Add(new Movie() { Title = "3" });
-            viewModel.movies.Add(new Movie() { Title = "4" });
+            viewModel.Movies = new List<Movie>();
+            viewModel.Movies.Add(new Movie() { Title = "1" });
+            viewModel.Movies.Add(new Movie() { Title = "2" });
+            viewModel.Movies.Add(new Movie() { Title = "3" });
+            viewModel.Movies.Add(new Movie() { Title = "4" });
             return View(viewModel);
         }
     }
