@@ -14,7 +14,7 @@
         <input asp-for="MovieUser.FirstName" />
         <input asp-for="MovieUser.LastName" placeholder="Last name" />
 
-        <select asp-items="@(new SelectList(Model.Movies, "Title"))" asp-for="MovieUser.Movie"></select> <!--asp-items needs List, asp-for needs property-->
+        <select asp-items="@(new SelectList(Model.Movies, "Id", "Title"))" asp-for="MovieUser.Movie"></select> <!--asp-items needs List, asp-for needs property-->
 
         <input type="submit" value="Save" />
     </form>
