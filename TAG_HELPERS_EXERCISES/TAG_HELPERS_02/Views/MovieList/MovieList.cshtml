@@ -1,0 +1,22 @@
+﻿@model TAG_HELPERS_02.Models.MovieListViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+</head>
+<body>
+    <form asp-controller="MovieList" asp-action="MovieList" method="post">
+        <input asp-for="MovieUser.FirstName" />
+        <input asp-for="MovieUser.LastName" placeholder="Last name" />
+
+        <select asp-items="@(new SelectList(Model.Movies, "Title"))" asp-for="MovieUser.Movie"></select> <!--asp-items needs List, asp-for needs property-->
+
+        <input type="submit" value="Save" />
+    </form>
+</body>
+</html>
