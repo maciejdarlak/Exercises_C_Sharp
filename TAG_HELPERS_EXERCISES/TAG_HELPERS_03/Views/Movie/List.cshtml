@@ -1,8 +1,16 @@
-﻿@model TAG_HELPERS_03.Models.Movie
+﻿@model IEnumerable<TAG_HELPERS_03.Models.Movie>
 @{
     Layout = null;
 }
 
+    <ul>
+        @foreach (var movie in Model)
+        {
+        <li>
+            <a asp-controller="Movie" asp-action="List" asp-route-id="@movie.Id">@movie.Title</a>
+        </li>
+        }
+    </ul>
 
-<a asp-controller="Movie" asp-action="List"> Movie List</a>
+
 
