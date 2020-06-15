@@ -7,7 +7,7 @@
         @foreach (var movie in Model)
         {
         <li>
-            <a asp-controller="Movie" asp-action="List" asp-route-id="@movie.Id">@movie.Title</a>
+            <form asp-controller="Movie" asp-action="List" asp-route-id="@movie.Id">@movie.Title</form>
         </li>
         }
     </ul>

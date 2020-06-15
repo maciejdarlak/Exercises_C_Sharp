@@ -16,6 +16,7 @@ namespace TAG_HELPERS_01.Controllers
             viewModel.MovieUser = new MovieUser() { FirstName = "John", LastName = "Smith", Movie = "1" };
 
             viewModel.Movies = new List<String>() { "1", "2", "3", "4", "5" };
+
             return View(viewModel);
         }
     }
