@@ -9,8 +9,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TAG_HELPERS_02", "TAG_HELPE
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TAG_HELPERS_03", "TAG_HELPERS_03\TAG_HELPERS_03.csproj", "{C95ECE9F-097F-460B-8E15-4342D0F6ABF1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TAG_HELPERS_04", "TAG_HELPERS_04\TAG_HELPERS_04.csproj", "{FD10EE96-97FB-4255-AA95-5F85FE219A45}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,10 +27,6 @@ Global
 		{C95ECE9F-097F-460B-8E15-4342D0F6ABF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C95ECE9F-097F-460B-8E15-4342D0F6ABF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C95ECE9F-097F-460B-8E15-4342D0F6ABF1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FD10EE96-97FB-4255-AA95-5F85FE219A45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FD10EE96-97FB-4255-AA95-5F85FE219A45}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FD10EE96-97FB-4255-AA95-5F85FE219A45}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FD10EE96-97FB-4255-AA95-5F85FE219A45}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
