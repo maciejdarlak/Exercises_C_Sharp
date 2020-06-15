@@ -55,7 +55,7 @@ namespace ROUTING_EXERCISES_01
 
                 endpoints.MapControllerRoute( // This is the next one because is lower.
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Country}/{action=List}/{id?}");
             });
         }
     }

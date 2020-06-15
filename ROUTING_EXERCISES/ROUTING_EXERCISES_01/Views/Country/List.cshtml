@@ -1,0 +1,12 @@
+﻿@model IEnumerable<ROUTING_EXERCISES_01.Models.Country>
+@{
+    ViewData["Title"] = "List";
+}
+
+<h1>List</h1>
+
+@foreach (var country in Model)
+{
+    <form asp-controller="Country" asp-action="List" />@country.Name
+    <form asp-controller="Country" asp-action="List" />@country.City
+}    

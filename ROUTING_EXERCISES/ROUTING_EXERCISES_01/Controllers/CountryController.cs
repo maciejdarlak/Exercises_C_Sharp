@@ -19,7 +19,7 @@ namespace ROUTING_EXERCISES_01.Controllers
             List<Country> countries = new List<Country>()
             {
                 new Country() { Id=1, Name="Spain", City="Barcelona" },
-                new Country() { Id=2, Name="italy", City="Rome" }
+                new Country() { Id=2, Name="Italy", City="Rome" }
             };
             return View(countries);
         }
