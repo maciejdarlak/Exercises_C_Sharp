@@ -32,7 +32,7 @@ namespace ROUTING_EXERCISES_01.Controllers
             return View(countries);
         }
 
-        [Route("{Id}")]
+        [Route("{Id}")] // That method will be called as "any URL word" after .../cc/"any URL word"
         public IActionResult Details(int id)
         {
             return Content("Product details for #" + id);
