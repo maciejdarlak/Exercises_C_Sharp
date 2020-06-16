@@ -7,7 +7,7 @@ using ROUTING_EXERCISES_01.Models;
 
 namespace ROUTING_EXERCISES_01.Controllers
 {
-    [Route("/countries")]
+    [Route("/countriesAndCities")]
     public class CountryController : Controller
     {
         public IActionResult List()
