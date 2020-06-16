@@ -7,9 +7,10 @@ using ROUTING_EXERCISES_01.Models;
 
 namespace ROUTING_EXERCISES_01.Controllers
 {
-    [Route("/countriesAndCities")]
+    [Route("/cc")] // This is a new URL for this class = the old one .../country --> the new one .../cc
     public class CountryController : Controller
     {
+        [Route("/countries")] // This is a new URL for this method = the old one .../country/list --> the new one .../countries
         public IActionResult List()
         {
             List<Country> countries = new List<Country>()
@@ -20,7 +21,7 @@ namespace ROUTING_EXERCISES_01.Controllers
             return View(countries);
         }
 
-        [Route("/cities")] //This is a new URL for this method = the old one .../country/List --> the new one .../countries
+        [Route("/cities")] 
         public IActionResult List2()
         {
             List<Country> countries = new List<Country>()
