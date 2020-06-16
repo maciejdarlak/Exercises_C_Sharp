@@ -18,7 +18,6 @@ namespace ROUTING_EXERCISES_01.Controllers
             _logger = logger;
         }
 
-        [Route("/countries")]
         public IActionResult Index()
         {
             return View();
