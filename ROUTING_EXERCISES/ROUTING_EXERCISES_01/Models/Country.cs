@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 
 namespace ROUTING_EXERCISES_01.Models
 {
-    [Route("/countries")]
     public class Country
     {
         public int Id { get; set; }

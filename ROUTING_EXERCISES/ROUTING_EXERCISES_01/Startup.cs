@@ -49,13 +49,13 @@ namespace ROUTING_EXERCISES_01
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(  // This is No.1 because is upper.
-                    name: "product",
-                    pattern: "product/{*word}",
-                    defaults: new { controller = "Product", action = "Word" });
+                    name: "Country",
+                    pattern: "{controller=Country}/{action=List}/{id?}",
+                    defaults: new { controller = "Country", action = "List" });
 
                 endpoints.MapControllerRoute( // This is the next one because is lower.
                     name: "default",
-                    pattern: "{controller=Country}/{action=List}/{id?}");
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }

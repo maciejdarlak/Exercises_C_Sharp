@@ -14,6 +14,7 @@ namespace ROUTING_EXERCISES_01.Controllers
             return Content("Product overview");
         }
 
+        [Route("/countries")] //This is a new URL - the old one .../country/List --> the new one .../countries
         public IActionResult List()
         {
             List<Country> countries = new List<Country>()
@@ -29,6 +30,7 @@ namespace ROUTING_EXERCISES_01.Controllers
             return Content("Product details for #" + id);
         }
 
+        
         public IActionResult Word()
         {
             return View();
