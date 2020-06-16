@@ -50,7 +50,7 @@ namespace ROUTING_EXERCISES_01
             {
                 endpoints.MapControllerRoute(  // This is No.1 because is upper.
                     name: "Country",
-                    pattern: "{controller=Country}/{action=List}/{id?}");
+                    pattern: "{controller=Home}/{action=Privacy}/{id?}");
 
                 endpoints.MapControllerRoute( // This is the next one because is lower.
                     name: "default",
