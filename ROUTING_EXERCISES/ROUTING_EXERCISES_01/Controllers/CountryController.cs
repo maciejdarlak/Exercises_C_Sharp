@@ -7,10 +7,10 @@ using ROUTING_EXERCISES_01.Models;
 
 namespace ROUTING_EXERCISES_01.Controllers
 {
-    [Route("/cc")] // This is a new URL for this class = the old one .../country --> the new one .../cc
+    [Route("/cc")] // This is a new URL for this class = the old one .../country --> the new one .../cc.
     public class CountryController : Controller
     {
-        [Route("/countries")] // This is a new URL for this method = the old one .../country/list --> the new one .../countries
+        [Route("/countries")] // This is a new URL for this method = the old one .../country/list --> the new one .../countries.
         public IActionResult List()
         {
             List<Country> countries = new List<Country>()
@@ -32,10 +32,16 @@ namespace ROUTING_EXERCISES_01.Controllers
             return View(countries);
         }
 
-        [Route("{Id}")] // That method will be called as "any URL word" after .../cc/"any URL word"
+        [Route("{Id}")] // That method will be called as "any URL word" after .../cc/"any URL word".
         public IActionResult Details(int id)
         {
             return Content("Product details for #" + id);
+        }
+
+        [Route("/blog/{entryId}/{*slug}")] // This is a new URL for this method = .../blog/any int/any string ("*" provides the possibility of using "/" in a variable "slug").
+        public IActionResult Blog(int entryId, string slug)
+        {
+            return Content($"Blog entry with ID #{entryId} requested (URL Slug: {slug})");
         }
     }
 }
