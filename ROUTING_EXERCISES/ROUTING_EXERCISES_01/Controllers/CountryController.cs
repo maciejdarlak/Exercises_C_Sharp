@@ -43,5 +43,11 @@ namespace ROUTING_EXERCISES_01.Controllers
         {
             return Content($"Blog entry with ID #{entryId} requested (URL Slug: {slug})");
         }
+
+        [Route("/blog/{entryId}/{slug?}")] // This is a new URL for this method = .../blog/any int/ OPTIONAL any string ("?" provides optional using).
+        public IActionResult Blog2(int entryId, string slug)
+        {
+            return Content($"Blog entry with ID #{entryId} requested (URL Slug: {slug})");
+        }
     }
 }
