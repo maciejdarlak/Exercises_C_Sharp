@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using ROUTING_EXERCISES_01.Models;
 
+// Generally, it's about overwriting the URL (classes, methods) to make the new URL more readable (shorter, more comprehensive, readable).
+
 namespace ROUTING_EXERCISES_01.Controllers
 {
     [Route("/cc")] // This is a new URL for this class = the old one .../country --> the new one .../cc.
@@ -21,7 +23,7 @@ namespace ROUTING_EXERCISES_01.Controllers
             return View(countries);
         }
 
-        [Route("/cities")] 
+        [Route("/cities")]
         public IActionResult List2()
         {
             List<Country> countries = new List<Country>()
@@ -36,18 +38,6 @@ namespace ROUTING_EXERCISES_01.Controllers
         public IActionResult Details(int id)
         {
             return Content("Product details for #" + id);
-        }
-
-        [Route("/blog/{entryId}/{*slug}")] // This is a new URL for this method = .../blog/any int/any string ("*" provides the possibility of using "/" in a variable "slug").
-        public IActionResult Blog(int entryId, string slug)
-        {
-            return Content($"Blog entry with ID #{entryId} requested (URL Slug: {slug})");
-        }
-
-        [Route("/blog/{entryId}/{slug?}")] // This is a new URL for this method = .../blog/any int/ OPTIONAL any string ("?" provides optional using).
-        public IActionResult Blog2(int entryId, string slug)
-        {
-            return Content($"Blog entry with ID #{entryId} requested (URL Slug: {slug})");
         }
     }
 }
