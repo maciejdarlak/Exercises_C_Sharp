@@ -19,6 +19,11 @@ namespace MODELS_EXERCISES_01.Models
 
         [Required(ErrorMessage = "You must enter a value for the Mail Address field!")]
         [EmailAddress(ErrorMessage = "Please enter a valid e-mail address!")]
+        [Compare("MailAddressRepeated")] // there will be a comment: "'MailAddress' and 'MailAddressRepeated' do not match."
         public string MailAddress { get; set; }
+
+        [Required(ErrorMessage = "You must enter a value for the Mail Address field!")]
+        [EmailAddress(ErrorMessage = "Please enter a valid e-mail address!")]
+        public string MailAddressRepeated { get; set; }
     }
 }

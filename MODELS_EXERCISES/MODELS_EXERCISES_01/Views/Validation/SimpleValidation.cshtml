@@ -1,26 +1,32 @@
 ﻿@model MODELS_EXERCISES_01.Models.WebUser
 
 
-<form asp-action="SimpleValidation">
+    <form asp-action="SimpleValidation">
 
-    <div class="form-group">
-        <label asp-for="FirstName"></label>
-        <input asp-for="FirstName" />
-        <span asp-validation-for="FirstName"></span>
-    </div>
+        <div class="form-group">
+            <label asp-for="FirstName"></label>
+            <input asp-for="FirstName" />
+            <span asp-validation-for="FirstName"></span>
+        </div>
 
-    <div class="form-group">
-        <label asp-for="LastName"></label>
-        <input asp-for="LastName" />
-        <span asp-validation-for="LastName"></span>
-    </div>
+        <div class="form-group">
+            <label asp-for="LastName"></label>
+            <input asp-for="LastName" />
+            <span asp-validation-for="LastName"></span>
+        </div>
 
-    <div class="form-group">
-        <label asp-for="MailAddress"></label>
-        <input asp-for="MailAddress" />
-        <span asp-validation-for="MailAddress"></span>
-    </div>
+        <div class="form-group">
+            <label asp-for="MailAddress"></label>
+            <input asp-for="MailAddress" />
+            <span asp-validation-for="MailAddress"></span>
+        </div>
 
-    <input type="submit" value="Submit" />
+        <div class="form-group">
+            <label asp-for="MailAddressRepeated"></label>
+            <input asp-for="MailAddressRepeated" />
+            <span asp-validation-for="MailAddressRepeated"></span>
+        </div>
 
-</form>
+        <input type="submit" value="Submit" />
+
+    </form>
