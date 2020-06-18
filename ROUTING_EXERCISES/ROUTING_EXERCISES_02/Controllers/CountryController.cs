@@ -4,9 +4,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
-namespace ROUTING_EXERCISES_01.Controllers
+namespace ROUTING_EXERCISES_02.Controllers
 {
-    public class Country2Controller : Controller
+    public class CountryControllerc : Controller
     {
         /*
          With this in place, the first parameter has to be of the integer data type and must be between 1 and 999999. 
