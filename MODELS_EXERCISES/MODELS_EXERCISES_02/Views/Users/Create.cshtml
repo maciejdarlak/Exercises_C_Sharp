@@ -1,0 +1,40 @@
+﻿@model MODELS_EXERCISES_02.Models.WebUser
+
+<html>
+
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.11/jquery.validate.unobtrusive.min.js"></script>
+    </head>
+
+    <body>
+        @{ ViewData["Title"] = "Create";}
+
+        <h1>Create User</h1>
+
+        <form asp-action="Create">
+            <div>
+                <label asp-for="FirstName"></label>
+                <input asp-for="FirstName" />
+                <span asp-validation-for="FirstName" style="color: red;"></span><br />
+            </div>
+            <br />
+            <div>
+                <label asp-for="LastName"></label>
+                <input asp-for="LastName" />
+                <span asp-validation-for="LastName" style="color: red;"></span>
+            </div>
+            <br />
+            <div>
+                <label asp-for="MailAddress"></label>
+                <input asp-for="MailAddress" />
+                <span asp-validation-for="MailAddress" style="color: red;"></span>
+            </div>
+            <br />
+
+            <input type="submit" value="Create" />
+        </form>
+    </body>
+
+</html>
