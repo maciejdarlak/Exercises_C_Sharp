@@ -1,6 +1,6 @@
 using System;
 
-namespace CORE_CONCEPTS_01.Models
+namespace CORE_CONCEPTS_EXERCISES_01.Models
 {
     public class ErrorViewModel
     {

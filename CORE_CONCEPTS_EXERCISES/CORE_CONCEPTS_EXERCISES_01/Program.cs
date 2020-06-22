@@ -7,7 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace CORE_CONCEPTS_01
+namespace CORE_CONCEPTS_EXERCISES_01
 {
     public class Program
     {

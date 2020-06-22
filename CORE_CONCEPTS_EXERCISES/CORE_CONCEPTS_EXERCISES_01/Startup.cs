@@ -8,11 +8,8 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.FileProviders;
-using System.IO;
 
-
-namespace CORE_CONCEPTS_01
+namespace CORE_CONCEPTS_EXERCISES_01
 {
     public class Startup
     {
@@ -26,21 +23,12 @@ namespace CORE_CONCEPTS_01
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDirectoryBrowser(); // 3.This code allows directory browsing of the wwwroot/images folder using the URL !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
             services.AddControllersWithViews();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            app.UseStaticFiles(); // 1.It enables the serving of static files in the wwwroot folder !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-            app.UseDirectoryBrowser(new DirectoryBrowserOptions // 2.It enables directory browsing of the wwwroot/images folder using the URL http://<server_address>/MyImages: !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-            {
-                FileProvider = new PhysicalFileProvider(
-                Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "images")),
-                RequestPath = "/MyImages"
-            });
-
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
