@@ -6,21 +6,25 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using CORE_CONCEPTS_03.Models;
+using Microsoft.Extensions.Configuration;
+
 
 namespace CORE_CONCEPTS_03.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        
+        private readonly IConfiguration _configuration;
+        // IConfiguration has to be add as a constructor parameter.
+        public HomeController(IConfiguration configuration)
         {
-            _logger = logger;
+            _configuration = configuration;
         }
 
         public IActionResult Index()
         {
-            return View();
+            // Thanks to IConfiguration in constructor parameter is possible to use settings from appsettings.json file, e.g. Website object.
+            return Content("Welcome to " + _configuration.GetSection("Website").GetValue<string>("Title") + " version " + _configuration.GetSection("Website").GetValue<string>("Version"));
         }
 
         public IActionResult Privacy()
