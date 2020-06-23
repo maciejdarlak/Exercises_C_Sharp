@@ -29,7 +29,9 @@ namespace CORE_CONCEPTS_02
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            app.UseStatusCodePages(); // These errors are now handled by our application instead of the browser
+            // These errors are now handled by our application instead of the browser
+            app.UseStatusCodePages("text/html", "We're <b>really</b> sorry, but something went wrong. Error code: {0}");
+            
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
