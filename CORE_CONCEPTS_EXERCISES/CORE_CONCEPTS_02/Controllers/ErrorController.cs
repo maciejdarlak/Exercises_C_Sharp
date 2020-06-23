@@ -7,10 +7,12 @@ using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Authorization;
 using System.IO;
 
+
 namespace CORE_CONCEPTS_02.Controllers
 {
     public class ErrorController : Controller
     {
+        // Here bellow is showed a handling exceptions.
         [AllowAnonymous]
         public IActionResult Index()
         {
