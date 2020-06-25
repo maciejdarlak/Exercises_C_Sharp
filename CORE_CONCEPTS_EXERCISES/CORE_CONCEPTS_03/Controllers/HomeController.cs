@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using CORE_CONCEPTS_03.Models;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Options;  // It has to be added.
 
 
 namespace CORE_CONCEPTS_03.Controllers
@@ -14,16 +15,16 @@ namespace CORE_CONCEPTS_03.Controllers
     public class HomeController : Controller
     {
         
-        private readonly IConfiguration _configuration;
+        private readonly WebsiteOptions _websiteOptions;
         // IConfiguration has to be add as a constructor parameter.
-        public HomeController(IConfiguration configuration)
+        public HomeController(IOptions<WebsiteOptions> websiteOptions)
         {
-            _configuration = configuration;
+            this._websiteOptions = websiteOptions.Value;
         }
 
         public IActionResult Index()
         {
-            // Thanks to IConfiguration in constructor parameter is possible to use settings from appsettings.json file, e.g. Website object.
+            // Thanks to IConfiguration in constructor parameter is possible to use proporties from appsettings.json file, e.g. Website object proporties.
             return Content("Welcome to " + _configuration.GetSection("Website").GetValue<string>("Title") + " version " + _configuration.GetSection("Website").GetValue<string>("Version"));
         }
 
