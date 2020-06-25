@@ -16,7 +16,7 @@ namespace CORE_CONCEPTS_03.Controllers
     {
         
         private readonly WebsiteOptions _websiteOptions;
-        // IConfiguration has to be add as a constructor parameter.
+        // IOptions<WebsiteOptions> has to be added as a constructor parameter (which allows getting WebsiteOptions from ConfigureServices method from StartUp file).
         public HomeController(IOptions<WebsiteOptions> websiteOptions)
         {
             this._websiteOptions = websiteOptions.Value;
@@ -24,8 +24,8 @@ namespace CORE_CONCEPTS_03.Controllers
 
         public IActionResult Index()
         {
-            // Thanks to IConfiguration in constructor parameter is possible to use proporties from appsettings.json file, e.g. Website object proporties.
-            return Content("Welcome to " + _configuration.GetSection("Website").GetValue<string>("Title") + " version " + _configuration.GetSection("Website").GetValue<string>("Version"));
+            // Thanks to constructor parameter is possible to use proporties from appsettings.json file via actions in StartUp file.
+            return Content("Welcome to " + _websiteOptions.Title + " version " + _websiteOptions.Version);
         }
 
         public IActionResult Privacy()

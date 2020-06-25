@@ -8,7 +8,7 @@ namespace CORE_CONCEPTS_03.Models
     public class WebsiteOptions // This is an object addded to appsettings.json file.
     {
         public WebsiteOptions() { }
-        public string Title { get; set; }
+        public string Title = "RED";
         public double Version { get; set; }
     }
 }
