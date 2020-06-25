@@ -5,28 +5,33 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Configuration;  // It has to be added.
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using CORE_CONCEPTS_03.Models;
 
+
+//After making changes to the StartUp file, we can use the solution in controllers.
 namespace CORE_CONCEPTS_03
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        // IConfiguration is added automically by VS.
+        // The IConfiguration passed in the constructor parameter can pass properties from the appsettings.json file
+        public Startup(IConfiguration configuration) 
         {
             Configuration = configuration;
         }
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.Configure<WebsiteOptions>(Configuration); // It has to be added. Here is connected class WebsiteOptions and IConfiguration (constructor parameter).
+
             services.AddControllersWithViews();
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
@@ -36,7 +41,6 @@ namespace CORE_CONCEPTS_03
             else
             {
                 app.UseExceptionHandler("/Home/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
             app.UseHttpsRedirection();
