@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HTTPCONTEXT_01", "HTTPCONTE
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HTTPCONTEXT_02", "HTTPCONTEXT_02\HTTPCONTEXT_02.csproj", "{DA46FAFB-EFD6-4160-9725-D422A7BA691D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HTTPCONTEXT_03", "HTTPCONTEXT_03\HTTPCONTEXT_03.csproj", "{7B3E61F2-78C2-41EE-960B-67FAD396AD5A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{DA46FAFB-EFD6-4160-9725-D422A7BA691D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA46FAFB-EFD6-4160-9725-D422A7BA691D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA46FAFB-EFD6-4160-9725-D422A7BA691D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B3E61F2-78C2-41EE-960B-67FAD396AD5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B3E61F2-78C2-41EE-960B-67FAD396AD5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B3E61F2-78C2-41EE-960B-67FAD396AD5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B3E61F2-78C2-41EE-960B-67FAD396AD5A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
