@@ -33,5 +33,19 @@ namespace HTTPCONTEXT_01.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+        public IActionResult QueryTest()
+        {
+            string firstName = "Maciek";
+            string lastName = "Darlak";
+
+            // The Request property provides access to the properties and methods of the HttpRequest class, the Query property allows to easily access keys and their values. 
+            if (!String.IsNullOrEmpty(HttpContext.Request.Query["firstName, lastName"]))
+            {
+                firstName = HttpContext.Request.Query["firstName"];
+                lastName = HttpContext.Request.Query["lastName"];
+            }
+            return Content("Name is " + firstName + " " + lastName);
+        }
     }
 }
