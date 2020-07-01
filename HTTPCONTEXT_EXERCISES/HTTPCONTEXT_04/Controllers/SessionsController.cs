@@ -13,7 +13,7 @@ namespace HTTPCONTEXT_04.Controllers
         public IActionResult Index() // This method tries to get the session data with the GetString() method, using "Name" as the key. 
         {
             string name = HttpContext.Session.GetString("Name");
-            return View(model: name);
+            return View(model: name); 
         }
 
         public IActionResult SaveName(string name)
