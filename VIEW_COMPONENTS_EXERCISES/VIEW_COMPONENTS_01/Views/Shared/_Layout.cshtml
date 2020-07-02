@@ -44,8 +44,9 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @RenderSection("Scripts", required: false)
-    <div style="color: blue;border: 1px solid #b6ff00">
-        @await Component.InvokeAsync("Cart") 
-    </div>
+<div style="color: blue;border: 1px solid #b6ff00">
+    @await Component.InvokeAsync("Cart")  <!--It has to be added.-->
+    @await Component.InvokeAsync("Cart2") <!--It has to be added.-->
+</div>
 </body>
 </html>
