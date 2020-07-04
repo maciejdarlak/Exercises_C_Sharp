@@ -11,7 +11,7 @@ namespace VIEW_COMPONENTS_01.Components
     {
         public IViewComponentResult Invoke()
         {
-            return Content("This is from <h2>View Component</h2>");
+            return Content("Cart2Controller - This is from <h2>View Component</h2>");
         }
     }
 }

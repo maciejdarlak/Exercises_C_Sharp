@@ -11,7 +11,7 @@ namespace VIEW_COMPONENTS_01.Components
     {
         public string Invoke()
         {
-            return "This is from View Component";
+            return "CartController - This is from View Component";
         }
     }
 }

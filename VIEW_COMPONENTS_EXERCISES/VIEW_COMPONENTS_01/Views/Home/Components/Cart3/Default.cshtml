@@ -1,0 +1,18 @@
+﻿@model Product[] 
+
+    <h8>Cart3Controller bellow:</h8>
+<!--This is a partial view whis is put in _Layout file-->
+<table style="width:50%">
+    <tr>
+        <td><u>Product Name</u></td>
+        <td><u>Price</u></td>
+    </tr>
+
+    @foreach (var product in Model)
+    {
+        <tr>
+            <td>@product.name</td>
+            <td>@product.price</td>
+        </tr>
+    }
+</table>
