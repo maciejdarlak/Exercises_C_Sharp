@@ -14,7 +14,7 @@ namespace DI_01.Models
             products = new Dictionary<string, Product>();
             new List<Product>
             {
-                new Product() { Name = "Women Shoes", Price = 99M },
+                new Product { Name = "Women Shoes", Price = 99M },
                 new Product { Name = "Skirts", Price = 29.99M },
                 new Product { Name = "Pants", Price = 40.5M }
             }.ForEach(p => AddProduct(p));
