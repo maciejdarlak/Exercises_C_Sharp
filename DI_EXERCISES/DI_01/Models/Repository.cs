@@ -17,7 +17,7 @@ namespace DI_01.Models
                 new Product { Name = "Women Shoes", Price = 99M },
                 new Product { Name = "Skirts", Price = 29.99M },
                 new Product { Name = "Pants", Price = 40.5M }
-            }.ForEach(p => AddProduct(p));
+            }.ForEach(p => AddProduct(p)); //Method AddProduct creates keys for valuaes in dictionary products.
         }
             public IEnumerable<Product> Products => products.Values;
             public Product this[string name] => products[name];
