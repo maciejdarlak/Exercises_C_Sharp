@@ -10,9 +10,15 @@ namespace DI_01.Controllers
 {
     public class HomeController : Controller
     {
+        private IRepository repository;
+        public HomeController(IRepository repo)
+        {
+            repository = repo;
+        }
+
         public IActionResult Index()
         {
-            return View(new Repository().Products); //References directly to the Products property when an object is created.
+            return View(repository.Products); //References directly to the Products property when an object is created.
         }
     }
 }
