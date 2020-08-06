@@ -6,7 +6,7 @@ using DI_01.Models;
 
 namespace DI_01.Models
 {
-    public class Repository : IRepository
+    public class Repository : IRepository //Adding this interface is essential - it is linked to any model in the Startup file.
     {
         private Dictionary<string, Product> products;
         public Repository()
