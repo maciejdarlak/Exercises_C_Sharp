@@ -23,5 +23,6 @@ namespace DI_01.Models
             public Product this[string name] => products[name];
             public void AddProduct(Product product) => products[product.Name] = product;
             public void DeleteProduct(Product product) => products.Remove(product.Name);
+
     }
 }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using DI_01.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace DI_01.Controllers
 {
@@ -14,7 +15,6 @@ namespace DI_01.Controllers
         {
             repository = repo;
         }
-
         public IActionResult Index()
         {
             return View(repository.Products); //References directly to the Products property when an object is created.
