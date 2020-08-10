@@ -13,7 +13,7 @@ namespace DI_01.Models
             products = new Dictionary<string, Product>();
             new List<Product>
             {
-                new Product { Name = "Dog Shoes", Price = 1M },
+                 new Product { Name = "Dog Shoes", Price = 1M },
             }.ForEach(p => AddProduct(p)); //Method AddProduct creates keys for valuaes in dictionary products.
         }
         public IEnumerable<Product> Products => products.Values;
