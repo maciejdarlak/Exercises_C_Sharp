@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
+using DI_01.Models;
 
 namespace DI_01.Models
 {
@@ -16,7 +17,8 @@ namespace DI_01.Models
             set { items[key] = value; }
         }
         public IEnumerable<Product> Items => items.Values;
-        bool ContainsKey(string key) => items.ContainsKey(key);
-        void RemoveItem(string key) => items.Remove(key);
+        public bool ContainsKey(string key) => items.ContainsKey(key);
+        public void RemoveItem(string key) => items.Remove(key);
     }
 }
+
