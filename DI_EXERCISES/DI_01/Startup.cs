@@ -17,6 +17,7 @@ namespace DI_01
         {
             services.AddTransient<IRepository, Repository>(); //Here IRepository is connected with any Model (Repository/ NewRepository)
             services.AddTransient<IStorage, Storage>(); //Here IRepository is connected with any Model (Repository/ NewRepository)
+            services.AddTransient<ProductSum>();
             services.AddControllersWithViews();
         }
 

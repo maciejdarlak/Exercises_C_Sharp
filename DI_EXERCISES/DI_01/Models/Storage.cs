@@ -6,6 +6,8 @@ using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
 using DI_01.Models;
 
+
+// This class allows additionally add a key.
 namespace DI_01.Models
 {
     public class Storage : IStorage
