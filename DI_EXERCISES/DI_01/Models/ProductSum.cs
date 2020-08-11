@@ -7,7 +7,7 @@ namespace DI_01.Models
 {
     public class ProductSum
     {
-        private IRepository Repository { get; set; };
+        public IRepository Repository { get; set; }
         public ProductSum(IRepository repo)
         {
             Repository = repo;

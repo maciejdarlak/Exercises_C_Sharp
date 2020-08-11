@@ -26,5 +26,13 @@ namespace DI_01.Models
         public void AddProduct(Product product) => storage[product.Name] = product;
 
         public void DeleteProduct(Product product) => storage.RemoveItem(product.Name);
+
+
+        //The GUID value will help to identify the specific instance of the Repository.cs class.
+        private string guid = System.Guid.NewGuid().ToString(); 
+        public override string ToString() 
+        {
+            return guid;
+        }
     }
 }

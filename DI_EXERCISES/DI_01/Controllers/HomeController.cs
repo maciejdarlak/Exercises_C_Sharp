@@ -19,7 +19,9 @@ namespace DI_01.Controllers
         }
         public IActionResult Index()
         {
-            ViewBag.Total = productSum.Total;
+            // ViewBag.Total = productSum.Total;
+            ViewBag.HomeControllerGuid = repository.ToString();
+            ViewBag.TotalGuid = productSum.Repository.ToString();
             return View(repository.Products); //References directly to the Products property when an object is created.
         }
     }
