@@ -16,6 +16,7 @@ namespace DI_01
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddTransient<IRepository, Repository>(); //Here IRepository is connected with any Model (Repository/ NewRepository)
+            services.AddTransient<IStorage, Storage>(); //Here IRepository is connected with any Model (Repository/ NewRepository)
             services.AddControllersWithViews();
         }
 
