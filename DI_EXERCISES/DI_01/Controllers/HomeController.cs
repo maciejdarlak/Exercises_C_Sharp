@@ -8,6 +8,29 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace DI_01.Controllers
 {
+    /*
+     * It is possible to declare dependencies using an action method instead of a constructor - good for application performance.
+      So only the particular action method causes the implementation type to initiate. 
+      This means the dependency is not resolved on every time the Controller is called:
+
+        public class HomeController : Controller
+        {
+            private IRepository repository;
+            public HomeController(IRepository repo)
+            {
+                repository = repo;
+            }
+  
+            public IActionResult Index([FromServices] ProductSum productSum)
+            {
+                // ViewBag.Total = productSum.Total;
+                ViewBag.HomeControllerGuid = repository.ToString();
+                ViewBag.TotalGuid = productSum.Repository.ToString();
+                return View(repository.Products);
+            }
+         }
+     */
+
     public class HomeController : Controller
     {
         private IRepository repository;
