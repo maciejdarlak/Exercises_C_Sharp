@@ -20,6 +20,25 @@ namespace ACTIONS_EXERCISES_01.Controllers
 
         public IActionResult Index()
         {
+            return View(DateTime.Now);
+        }
+
+        public IActionResult ViewBagExample()
+        {
+            ViewBag.CurrentDateTime = DateTime.Now;
+            ViewBag.CurrentYear = DateTime.Now.Year;
+            return View();
+        }
+
+        public IActionResult TempDataExample()
+        {
+            TempData["CurrentDateTime"] = DateTime.Now;
+            TempData["CurrentYear"] = DateTime.Now.Year;
+            return RedirectToAction("TempDataShow");
+        }
+
+        public IActionResult TempDataShow()
+        {
             return View();
         }
 

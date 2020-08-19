@@ -1,5 +1,4 @@
-﻿@model DateTime
-
+﻿
 @{
     Layout = null;
 }
@@ -12,6 +11,6 @@
     <title>Index</title>
 </head>
 <body>
-    Model: @Model and Year: @Model.Year
+    Model: @TempData["CurrentDateTime"] and Year: @TempData["CurrentYear"]
 </body>
 </html>
