@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using ACTIONS_EXERCISES_01.Models;
+using Microsoft.AspNetCore.Http;
+
 
 namespace ACTIONS_EXERCISES_01.Controllers
 {
@@ -39,6 +41,14 @@ namespace ACTIONS_EXERCISES_01.Controllers
 
         public IActionResult TempDataShow()
         {
+            return View();
+        }
+
+        public IActionResult SessionExample()
+        {
+            //Set session value.
+            HttpContext.Session.SetString("CurrentDateTime", DateTime.Now.ToString());
+            HttpContext.Session.SetString("CurrentYear", DateTime.Now.Year.ToString());
             return View();
         }
 

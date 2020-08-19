@@ -1,0 +1,19 @@
+﻿@using Microsoft.AspNetCore.Http 
+@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor     
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <!--Downloading sessions-->
+    Model: @HttpContextAccessor.HttpContext.Session.GetString("CurrentDateTime") and Year: @HttpContextAccessor.HttpContext.Session.GetString("CurrentYear");
+</body>
+</html>
