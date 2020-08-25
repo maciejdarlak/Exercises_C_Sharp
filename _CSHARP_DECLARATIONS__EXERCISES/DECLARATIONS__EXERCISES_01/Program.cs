@@ -6,7 +6,18 @@ namespace DECLARATIONS__EXERCISES_01
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            int poczatek = (int)DniTygodnia.Piatek;
+            Console.WriteLine(DniTygodnia.Poniedzialek);
+        }
+        enum DniTygodnia
+        {
+            Poniedzialek = 1,
+            Wtorek,
+            Sroda,
+            Czwartek,
+            Piatek,
+            Sobota,
+            Niedziela
         }
     }
 }
