@@ -6,7 +6,20 @@ namespace _CSHARP_STRUCTURES__EXERCISES_01
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+
+        }
+        struct Adoult
+        {
+            public int a;
+            public int b;
+            public int c;
+
+            public Adoult(int x)
+            {
+                a = x;
+                b = 2;
+                c = 3;
+            }
         }
     }
 }
