@@ -33,15 +33,15 @@ namespace _CSHARP_CLASSES__EXERCISES_01
 
 
 
-        class Baza
+        class Base
         {
             int pole;
         }
 
-        class Pochodna : Baza
+        class Kid : Base
         {
             int pole;
-            public Pochodna()
+            public Kid()
             {
                 base.pole = 25; 
                 pole = 100; 
