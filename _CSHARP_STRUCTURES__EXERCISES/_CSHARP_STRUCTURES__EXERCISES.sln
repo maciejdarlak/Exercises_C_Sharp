@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30406.217
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_CSHARP_STRUCTURES__EXERCISES", "_CSHARP_STRUCTURES__EXERCISES\_CSHARP_STRUCTURES__EXERCISES.csproj", "{2A9FCC8C-9134-4DC9-A145-DC355F757C7F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_CSHARP_STRUCTURES__EXERCISES_01", "_CSHARP_STRUCTURES__EXERCISES_01\_CSHARP_STRUCTURES__EXERCISES_01.csproj", "{48DEF6BD-EA17-4DE8-8F61-42EEB242BAB9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2A9FCC8C-9134-4DC9-A145-DC355F757C7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A9FCC8C-9134-4DC9-A145-DC355F757C7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A9FCC8C-9134-4DC9-A145-DC355F757C7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A9FCC8C-9134-4DC9-A145-DC355F757C7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48DEF6BD-EA17-4DE8-8F61-42EEB242BAB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48DEF6BD-EA17-4DE8-8F61-42EEB242BAB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48DEF6BD-EA17-4DE8-8F61-42EEB242BAB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48DEF6BD-EA17-4DE8-8F61-42EEB242BAB9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {385EAF0E-6DFF-4BED-B380-F6860DC73B97}
+	EndGlobalSection
+EndGlobal
