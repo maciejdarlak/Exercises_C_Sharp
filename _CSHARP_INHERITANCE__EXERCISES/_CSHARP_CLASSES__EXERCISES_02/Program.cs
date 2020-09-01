@@ -7,34 +7,31 @@ namespace _CSHARP_CLASSES__EXERCISES_02
     {
         static void Main(string[] args)
         {
-            // taking a string variable 
-            string str1 = "GFG";
-
-            // taking an Object type variable 
-            // assigning var1 to it 
-            object obj1 = str1;
-
-            // now try it to cast to a string 
-            string str2 = obj1 as string;
-
-            // checking Successfully cast or not 
-            if (str2 != null)
-            {
-                Console.WriteLine("Successfully Cast");
-            }
-
-            // now try to cast it to List 
-            List<string> mylist = obj1 as List<string>;
-
-            // checking Successfully cast or not 
-            if (mylist != null)
-            {
-                Console.WriteLine("Successfully Cast");
-            }
+            Example.DeriveredClass a = new Example.DeriveredClass();
+            if (a is Example.OtherDeriveredClas)
+                Console.WriteLine("OK");
             else
+                Console.WriteLine("Never");
+
+
+            Example.SomeInterface b = a as Example.SomeInterface;
+            if (b != null)
             {
-                Console.WriteLine("Not Successfull");
+                Console.WriteLine("OK 2");
             }
+        }
+
+
+        public class Example
+        {
+            public interface SomeInterface { };
+            public class SomeBaseClass : SomeInterface { };
+            public class DeriveredClass : SomeBaseClass { };
+            public class OtherDeriveredClas : SomeBaseClass { };
         }
     }
 }
+
+
+
+
