@@ -17,9 +17,9 @@ namespace _CSHARP_CLASSES__EXERCISES_02
             //Cast down
             Example.DeriveredClass2 b = a as Example.DeriveredClass2;
             if (b != null)
-            {
-                Console.WriteLine("OK 2");
-            }
+                Console.WriteLine("OK");
+            else
+                Console.WriteLine("Wrong");
         }
 
 
