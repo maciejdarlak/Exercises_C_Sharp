@@ -6,7 +6,7 @@ namespace _CSHARP_CLASSES__EXERCISES_01
     {
         static void Main(string[] args)
         {
-            Rectangle rectangle = new Square();
+            Rectangle rectangle = new Square(); //Cast up
             if (rectangle is Square)
             {
                 Console.WriteLine("Success");
