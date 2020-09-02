@@ -7,14 +7,14 @@ namespace _CSHARP_CLASSES__EXERCISES_02
     {
         static void Main(string[] args)
         {
-            //Cast up
+            //Upcast
             Example.DeriveredClass a = new Example.DeriveredClass();
             if (a is Example.SomeBaseClass)
                 Console.WriteLine("OK");
             else
                 Console.WriteLine("Wrong");
 
-            //Cast down - 1st way
+            //Downcast  - 1st way
             if (a is Example.DeriveredClass2)
             {
                 Example.DeriveredClass2 b = (Example.DeriveredClass2)a; 
@@ -23,7 +23,7 @@ namespace _CSHARP_CLASSES__EXERCISES_02
             else
                     Console.WriteLine("Wrong");
 
-            //Cast down - 2nd way
+            //Downcast - 2nd way
             Example.DeriveredClass2 c = a as Example.DeriveredClass2;
             if (c != null)
                 Console.WriteLine("OK");
