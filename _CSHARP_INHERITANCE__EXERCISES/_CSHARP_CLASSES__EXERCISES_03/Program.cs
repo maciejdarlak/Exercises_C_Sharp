@@ -21,7 +21,6 @@ namespace _CSHARP_CLASSES__EXERCISES_03
             if (someEmployee2 != null)   Console.WriteLine("Employee2 is a manager.");
         }
 
-
         public class Employee { }
         public class Manager : Employee { }
     }
