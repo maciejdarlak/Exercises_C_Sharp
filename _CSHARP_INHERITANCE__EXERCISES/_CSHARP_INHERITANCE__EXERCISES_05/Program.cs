@@ -9,25 +9,42 @@ namespace _CSHARP_INHERITANCE_EXERCISES_05
         {
             A a = new A();
             B b = new B();
+            C c = new C();
+            NoImpementation noImpementation = new NoImpementation();
 
-            Console.WriteLine($"{ b.Work(b.Name) }");
+            b.Work();
         }
 
         public class A
         {
-            public string Name = "A";
-            virtual public string Work(string Name)  //Virtual
+            virtual public void Work() //Virtual
             {
-                return ($"{ Name }");
+                Console.WriteLine("A");
             }
         }
 
         public class B : A
         {
-            public string Name = "B";
-            override public string Work(string Name)  //Override
+            virtual public void Work() //Override
             {
-                return ($"{ Name }");
+                Console.WriteLine("B");
+            }
+        }
+
+        public class C : A
+        {
+            public void Work() //
+            {
+                base.Work();
+                Console.WriteLine("C");
+            }
+        }
+
+        public class NoImpementation : A
+        {
+            public void Work() //NoImpementation - no obscuring
+            {
+                Console.WriteLine("NoImpementation");
             }
         }
     }
