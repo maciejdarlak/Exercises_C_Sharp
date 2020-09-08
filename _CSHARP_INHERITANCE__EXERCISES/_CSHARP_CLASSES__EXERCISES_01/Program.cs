@@ -2,7 +2,7 @@
 
 namespace _CSHARP_CLASSES__EXERCISES_01
 {
-    class Program
+    class Program //Upcast example
     {
         static void Main(string[] args)
         {

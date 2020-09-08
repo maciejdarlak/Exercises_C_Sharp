@@ -2,6 +2,7 @@
 
 namespace _CSHARP_CLASSES__EXERCISES_04
 {
+    //The proof that the conversion of object types does not apply to objects but references which, by their type, can narrow the view of objects.
     class Program
     {
         static void Main(string[] args)

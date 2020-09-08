@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace _CSHARP_CLASSES__EXERCISES_02
 {
-    class Program
+    class Program //Upcast and downcast example
     {
         static void Main(string[] args)
         {
