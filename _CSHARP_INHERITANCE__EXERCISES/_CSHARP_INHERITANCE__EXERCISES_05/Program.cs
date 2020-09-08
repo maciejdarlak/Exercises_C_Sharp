@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 
 namespace _CSHARP_INHERITANCE__EXERCISES_05
 {
@@ -6,7 +7,17 @@ namespace _CSHARP_INHERITANCE__EXERCISES_05
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            A a = new A();
+            Console.WriteLine($"{a.Name}");
+        }
+
+        public class A
+        {
+            public string Name;
+            virtual public void Work(string Name)
+            {
+                Console.WriteLine($"{ Name } works.");
+            }
         }
     }
 }
