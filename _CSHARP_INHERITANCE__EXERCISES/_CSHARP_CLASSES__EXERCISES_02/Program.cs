@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace _CSHARP_CLASSES__EXERCISES_02
+namespace _CSHARP_INHERITANCE_EXERCISES_02
 {
     class Program //Upcast and downcast example
     {

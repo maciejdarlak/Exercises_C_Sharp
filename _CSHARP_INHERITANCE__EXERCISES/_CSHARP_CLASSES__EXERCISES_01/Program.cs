@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _CSHARP_INHERITANCE__EXERCISES_01
+namespace _CSHARP_INHERITANCE_EXERCISES_01
 {
     class Program //Upcast example
     {
