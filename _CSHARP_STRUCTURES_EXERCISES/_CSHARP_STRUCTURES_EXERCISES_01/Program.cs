@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _CSHARP_STRUCTURES__EXERCISES_01
+namespace _CSHARP_STRUCTURES_EXERCISES_01
 {
     class Program
     {

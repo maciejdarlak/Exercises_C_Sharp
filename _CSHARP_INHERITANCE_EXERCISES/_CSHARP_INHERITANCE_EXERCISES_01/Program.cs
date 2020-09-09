@@ -10,7 +10,7 @@ namespace _CSHARP_INHERITANCE_EXERCISES_01
             if (rectangle is Square)
             {
                 Console.WriteLine("Success");
-            }            
+            }
         }
 
         public class Rectangle

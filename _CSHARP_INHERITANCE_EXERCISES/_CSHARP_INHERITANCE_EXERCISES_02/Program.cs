@@ -17,11 +17,11 @@ namespace _CSHARP_INHERITANCE_EXERCISES_02
             //Downcast  - 1st way
             if (a is Example.DeriveredClass2)
             {
-                Example.DeriveredClass2 b = (Example.DeriveredClass2)a; 
+                Example.DeriveredClass2 b = (Example.DeriveredClass2)a;
                 Console.WriteLine("OK");
             }
             else
-                    Console.WriteLine("Wrong");
+                Console.WriteLine("Wrong");
 
             //Downcast - 2nd way
             Example.DeriveredClass2 c = a as Example.DeriveredClass2;
@@ -42,7 +42,3 @@ namespace _CSHARP_INHERITANCE_EXERCISES_02
         }
     }
 }
-
-
-
-

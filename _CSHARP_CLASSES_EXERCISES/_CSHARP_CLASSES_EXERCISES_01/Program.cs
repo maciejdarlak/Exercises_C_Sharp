@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _CSHARP_CLASSES__EXERCISES_01
+namespace _CSHARP_CLASSES_EXERCISES_01
 {
     class Program
     {
@@ -43,8 +43,8 @@ namespace _CSHARP_CLASSES__EXERCISES_01
             int pole;
             public Kid()
             {
-                base.pole = 25; 
-                pole = 100; 
+                base.pole = 25;
+                pole = 100;
             }
         }
 
