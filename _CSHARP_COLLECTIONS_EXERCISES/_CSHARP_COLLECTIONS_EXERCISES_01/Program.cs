@@ -8,11 +8,10 @@ namespace _CSHARP_COLLECTIONS_EXERCISES_01
         {
             int[] a = { 1, 2, 3, 4, 5 };
 
-            Console.WriteLine(a[3]);
 
             foreach (var item in a)
             {
-                Console.WriteLine(a.GetLength(item));
+                Console.WriteLine(a.Length);
             }
         }
     }
