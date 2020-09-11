@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+
 
 namespace _CSHARP_COLLECTIONS_EXERCISES_01
 {
@@ -11,40 +13,39 @@ namespace _CSHARP_COLLECTIONS_EXERCISES_01
             people.Add(new Person(1, "Jan", "Kowalski", 24));
             people.Add(new Person(2, "Jan", "Nowak", 26));
             people.Add(new Person(3, "Anna", "Gruszka", 28));
+
             //People count
+            Console.WriteLine("EXAMPLE NO.1");
             Console.WriteLine(people.Count);
 
-            //Break line
-            Console.WriteLine("\n");
+            //>=26 years old
+            Console.WriteLine("EXAMPLE NO.2");
+            var peopleOver26 = people.Where(a => a.Age >= 26);
+            peopleOver26.ToList().ForEach(a => Console.WriteLine(a.LastName));
 
-            //People's names
-            foreach (var person in people)
-            {
-                Console.WriteLine(person.FirstName + " " + person.LastName);
-            }
+            //Name Anna
+            Console.WriteLine("EXAMPLE NO.3");
+            var peopleAnna = people.Where(a => a.FirstName.Equals("Anna"));
+            peopleAnna.ToList().ForEach(a => Console.WriteLine(a.LastName));
 
-            //Break line
-            Console.WriteLine("\n");
+            //>25 years old and name Jan
+            Console.WriteLine("EXAMPLE NO.4");
+            var peopleOver25AndJan = people.Where(a => (a.Age >= 25) && (a.FirstName == "Anna"));
+            peopleOver25AndJan.ToList().ForEach(a => Console.WriteLine(a.LastName));
 
-            //Finding a specific person
-            Person personAge26 = people.Find(a => a.Age == 26);
-            Console.WriteLine(personAge26.ToString());
+            //The oldest person
+            Console.WriteLine("EXAMPLE NO.5");
+            var oldestPerson = people.OrderByDescending(a => a.Age).Take(1);
+            peopleAnna.ToList().ForEach(a => Console.WriteLine(a.LastName));
 
-            //Break line
-            Console.WriteLine("\n");
+            //Sum of all ages
+            Console.WriteLine("EXAMPLE NO.6");
+            var sumAges = people.Sum(a => a.Age);
+            Console.WriteLine(sumAges);
 
-            //Finding specyfic Names
-            List<Person> janList = people.FindAll(a => a.FirstName.Equals("Jan"));
-            Console.WriteLine(janList.ToString());                                    
 
-            //As above but used a loop
-            foreach (var item in people)
-            {
-                if (item.FirstName == "Jan")
-                {
-                    Console.WriteLine(item.FirstName + " " + item.LastName);
-                }
-            }
+
+
         }
 
 
