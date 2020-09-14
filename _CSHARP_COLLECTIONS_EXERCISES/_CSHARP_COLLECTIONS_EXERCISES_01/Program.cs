@@ -36,15 +36,22 @@ namespace _CSHARP_COLLECTIONS_EXERCISES_01
             //The oldest person
             Console.WriteLine("EXAMPLE NO.5");
             var oldestPerson = people.OrderByDescending(a => a.Age).Take(1);
-            peopleAnna.ToList().ForEach(a => Console.WriteLine(a.LastName));
+            oldestPerson.ToList().ForEach(a => Console.WriteLine(a.LastName));
 
             //Sum of all ages
             Console.WriteLine("EXAMPLE NO.6");
             var sumAges = people.Sum(a => a.Age);
             Console.WriteLine(sumAges);
 
+            //Average age of all people
+            Console.WriteLine("EXAMPLE NO.7");
+            double averageAge = people.Average(a => a.Age);
+            Console.WriteLine(averageAge);
 
-
+            //The first person who is 26 years old
+            Console.WriteLine("EXAMPLE NO.8");
+            var first26YearsOld = people.First(averageAge => averageAge.Age >= 26);
+            Console.WriteLine(first26YearsOld.LastName);
 
         }
 
