@@ -57,8 +57,6 @@ namespace _CSHARP_COLLECTIONS_EXERCISES_01
             Console.WriteLine("EXAMPLE NO.9");
             var averageAgePerson = people.Where(a => a.Age == people.Average(a => a.Age));
             averageAgePerson.ToList().ForEach(a => Console.WriteLine(a.LastName));
-
-
         }
 
 
