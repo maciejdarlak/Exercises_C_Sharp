@@ -50,8 +50,14 @@ namespace _CSHARP_COLLECTIONS_EXERCISES_01
 
             //The first person who is 26 years old
             Console.WriteLine("EXAMPLE NO.8");
-            var first26YearsOld = people.First(averageAge => averageAge.Age >= 26);
+            var first26YearsOld = people.FirstOrDefault(averageAge => averageAge.Age >= 26);
             Console.WriteLine(first26YearsOld.LastName);
+
+            //A person whose age is equal to the average age of all persons
+            Console.WriteLine("EXAMPLE NO.9");
+            var averageAgePerson = people.Where(a => a.Age == people.Average(a => a.Age));
+            averageAgePerson.ToList().ForEach(a => Console.WriteLine(a.LastName));
+
 
         }
 
