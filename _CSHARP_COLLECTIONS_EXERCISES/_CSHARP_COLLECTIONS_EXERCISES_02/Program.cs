@@ -38,9 +38,6 @@ namespace _CSHARP_COLLECTIONS_EXERCISES_02
             Console.WriteLine("EXAMPLE NO.4");
             var peselPeople = people.Where(a => a.Key.StartsWith("85")).OrderBy(a => a.Value.LastName).ThenBy(a => a.Value.FirstName);
             peselPeople.ToList().ForEach(a => Console.WriteLine(a.Value.LastName + " " + a.Value.FirstName));
-
-
-
         }
 
 
