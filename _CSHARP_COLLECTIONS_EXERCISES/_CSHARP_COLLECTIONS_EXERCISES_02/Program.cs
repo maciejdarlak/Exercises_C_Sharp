@@ -14,6 +14,7 @@ namespace _CSHARP_COLLECTIONS_EXERCISES_02
                 {"87010156123", new Person("Anna", "Krawczyk", 25)},
                 {"88010156123", new Person("Krzysztof", "Nowak", 24)},
                 {"85010156123", new Person("Katrzyna", "Lewandowska", 27)},
+                {"85010156124", new Person("Anna", "Lewandowska", 27)},
                 {"84010156123", new Person("Andrzej", "Wiśniewski", 28)}
             };
 
@@ -23,7 +24,10 @@ namespace _CSHARP_COLLECTIONS_EXERCISES_02
             var allPeople = people.Select(a => a.Value);
             allPeople.ToList().ForEach(a => Console.WriteLine(a.LastName));
 
-
+            //>=26 years old, ordered by last name and then by first name
+            Console.WriteLine("EXAMPLE NO.2");
+            var age26 = people.Where(a => a.Value.Age >= 26).OrderBy(a => a.Value.LastName).ThenBy(a => a.Value.FirstName);
+            age26.ToList().ForEach(a => Console.WriteLine(a.Value.LastName + " " + a.Value.FirstName));
 
 
 
