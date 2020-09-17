@@ -22,19 +22,22 @@ namespace _CSHARP_COLLECTIONS_EXERCISES_02
             //All people list
             Console.WriteLine("EXAMPLE NO.1");
             var allPeople = people.Select(a => a.Value);
-            allPeople.ToList().ForEach(a => Console.WriteLine(a.LastName));
+            allPeople.ToList().ForEach(a => Console.WriteLine(a.LastName + " " + a.FirstName));
 
             //>=26 years old, ordered by last name and then by first name
             Console.WriteLine("EXAMPLE NO.2");
             var age26 = people.Where(a => a.Value.Age >= 26).OrderBy(a => a.Value.LastName).ThenBy(a => a.Value.FirstName);
             age26.ToList().ForEach(a => Console.WriteLine(a.Value.LastName + " " + a.Value.FirstName));
 
+            //>=26 years old and name Anna, ordered by last name and then by first name
+            Console.WriteLine("EXAMPLE NO.3");
+            var age26Annas = people.Where(a => (a.Value.FirstName == "Anna") && (a.Value.Age >= 26));
+            age26Annas.ToList().ForEach(a => Console.WriteLine(a.Value.LastName + " " + a.Value.FirstName));
 
-
-
-
-
-
+            //Pesel starts 85, ordered by last name and then by first name
+            Console.WriteLine("EXAMPLE NO.4");
+            var peselPeople = people.Where(a => a.Key.StartsWith("85")).OrderBy(a => a.Value.LastName).ThenBy(a => a.Value.FirstName);
+            peselPeople.ToList().ForEach(a => Console.WriteLine(a.Value.LastName + " " + a.Value.FirstName));
 
 
 
