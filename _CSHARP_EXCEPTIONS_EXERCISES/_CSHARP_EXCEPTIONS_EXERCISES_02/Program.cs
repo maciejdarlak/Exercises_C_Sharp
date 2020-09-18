@@ -31,7 +31,9 @@ namespace _CSHARP_EXCEPTIONS_EXERCISES_02  //My own exception.
                     throw (new MyOwnException("Age cannot be less than 0."));  //"Throw" requires object which includes some exception class (here "MyOwnException").
                 }
                 else
+                {
                     Console.WriteLine("Correct age.");
+                }
             }
         }
 
