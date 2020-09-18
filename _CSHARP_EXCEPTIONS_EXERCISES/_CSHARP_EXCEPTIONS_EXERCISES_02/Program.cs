@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _CSHARP_EXCEPTIONS_EXERCISES_02  //My own exception
+namespace _CSHARP_EXCEPTIONS_EXERCISES_02  //My own exception.
 {
     class Program
     {
@@ -10,7 +10,7 @@ namespace _CSHARP_EXCEPTIONS_EXERCISES_02  //My own exception
 
             try  //Here it is looking for an exception.
             {
-                userAge.checkAge(10);
+                userAge.checkAge(-10);  //The value cannot be below 0.
             }
             catch(MyOwnException ex)  //if it faund it...
             {
@@ -28,10 +28,10 @@ namespace _CSHARP_EXCEPTIONS_EXERCISES_02  //My own exception
 
                 if (age < 0)
                 {
-                    throw (new MyOwnException("Age cannot be less than 0."));  //"Throw" requires object which includes some exception class.
+                    throw (new MyOwnException("Age cannot be less than 0."));  //"Throw" requires object which includes some exception class (here "MyOwnException").
                 }
                 else
-                    Console.WriteLine("Correct age");
+                    Console.WriteLine("Correct age.");
             }
         }
 
