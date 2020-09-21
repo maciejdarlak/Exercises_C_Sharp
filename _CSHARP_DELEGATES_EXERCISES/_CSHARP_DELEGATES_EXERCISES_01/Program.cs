@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-namespace _CSHARP_DELEGATES_EXERCISES_01
+namespace _CSHARP_DELEGATES_EXERCISES_01  //Declaration
 {
     class Program
     {
