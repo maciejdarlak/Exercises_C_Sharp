@@ -1,37 +1,34 @@
 ﻿using System;
 
-namespace _CSHARP_DELEGATES_EXERCISES_03
-{
-   
-
+namespace _CSHARP_DELEGATES_EXERCISES_03 //Multicasting
+{  
     class Program
     {
+        public delegate int ChangeNumber(int value);  //Delegate
+
         static void Main(string[] args)
-        {           
-            A a = new A();
-
-            Description description = new Description(a.Method1);
-
-            description += a.Method2;
-
-            string result1 = a.Method1("It ");
-            string result2 = a.Method2("works");
-
-            Console.WriteLine(description(result1, result2));
+        {
+            Numbers numbers = new Numbers();
+            ChangeNumber cn;
+            ChangeNumber cn1 = new ChangeNumber(numbers.AddNumber);
+            ChangeNumber cn2 = new ChangeNumber(numbers.MultiplayNumber);
+            cn = cn1;
+            cn += cn2;           
+            Console.WriteLine(cn(5));
         }
+       
+        public class Numbers  //Methods       
+        {
+            public int number = 5;
 
-        public delegate string Description(string value);
-
-        public class A
-        {          
-            public string Method1(string x)
+            public int AddNumber(int x)
             {
-                return x;
+                return number += x;
             }
 
-            public string Method2(string y)
+            public int MultiplayNumber(int y)
             {
-                return y;
+                return number *= y;
             }
         }
     }
