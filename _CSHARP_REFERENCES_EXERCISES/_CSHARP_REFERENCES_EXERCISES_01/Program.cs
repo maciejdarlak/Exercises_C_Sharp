@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _CSHARP_CLASSES_EXERCISES_02 //Copying values of reference types
+namespace _CSHARP_REFERENCES_EXERCISES_01 //Assignment operator ("=") and passing value / reference types to value / reference
 {
     public class Person
     {
@@ -27,20 +27,20 @@ namespace _CSHARP_CLASSES_EXERCISES_02 //Copying values of reference types
             Console.WriteLine(person1.Name); //4
             Console.WriteLine(person2.Name); //4
 
-            ChangeNameByRef(ref person2); 
+            ChangeNameByRef(ref person2);
             Console.WriteLine(person1.Name); //6
             Console.WriteLine(person2.Name); //7
 
-            void ChangeName(Person person)
+            void ChangeName(Person person) //There is a connection ref-object - parameter is a copy of ref so it has connection to address .
             {
-                person.Name = "4";
-                person = new Person("5");
+                person.Name = "4"; //It works - changes  and it will disappear when the method is finished.
+                person = new Person("5"); //It works BUT it will  disappear when the method is finished.
             }
 
             void ChangeNameByRef(ref Person person)
             {
-                person.Name = "6";
-                person = new Person("7");
+                person.Name = "6"; //It works - there is a connection ref-object.
+                person = new Person("7"); //It works - there is a connection ref-object.
             }
         }
     }
