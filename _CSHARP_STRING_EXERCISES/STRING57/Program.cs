@@ -9,7 +9,7 @@ namespace STRING57 //How to reverse a string?
         static void Main(string[] args)
         {
             A a = new A();
-            a.ReverseString("123456789");
+            a.ReverseString("123");
             Console.WriteLine();
         }
 
@@ -17,18 +17,29 @@ namespace STRING57 //How to reverse a string?
         {
             public void ReverseString(string str)
             {
-                char[] ArrayString = str.ToCharArray();
+                char[] str2 = str.ToCharArray(); //Returns char array
 
-                for (int i = 0, j = str.Length - 1; ; i++, j--)
+                for (int i = 0, j = str.Length - 1; i<j; i++, j--) //i < j cause to start loop
                 {
-                    ArrayString[i] = str[j];
-                    ArrayString[j] = str[i];
+                    str2[i] = str[j]; //Range: 1 
+                    str2[j] = str[i]; //Range: 2 -3 
                 }
-                Console.WriteLine(ArrayString);
+                Console.WriteLine(str2);
             }
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 
