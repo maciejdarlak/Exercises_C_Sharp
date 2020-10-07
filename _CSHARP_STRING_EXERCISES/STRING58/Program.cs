@@ -16,7 +16,7 @@ namespace STRING58 //How to use the Reverse() method of array class
 
             Console.WriteLine(); //A gap line
 
-            Array.Reverse(B);
+            Array.Reverse(B); //That's the point
 
             foreach (var j in B)
             {
