@@ -1,22 +1,32 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Globalization;
+using System.Security.Cryptography.X509Certificates;
 
 namespace STRING59 //How to reverse a string?
 {
-    class Program
+    class Program //How to reverse a string?
     {
         static void Main(string[] args)
         {
-            string reversedstring = new string(charArray);
-            Console.WriteLine(reversedstring);
+            A a = new A();
+            Console.WriteLine(a.ReverseStr("12345"));
         }
 
-        internal static void ReverseString(string str)
+        public class A
         {
-            char[] charArray = str.ToCharArray();
-            for (int i = 0, j = str.Length - 1; i < j; i++, j--)
+            public string ReverseStr(string _str)
             {
-                charArray[i] = str[j];
-                charArray[j] = str[i];
+                char[] charArray = _str.ToCharArray();
+
+                for (int i = 0, j = _str.Length - 1; i < j; i++, j--) //Only 2 loops then starts to be i >= j
+                {
+                    charArray[i] = _str[j]; 
+                    charArray[j] = _str[i];
+                }
+
+                string reversedstring = new string(charArray);
+                return reversedstring.ToString();
             }
         }
     }
