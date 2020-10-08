@@ -6,51 +6,35 @@ namespace STRING60 //How to find if the given string is a palindrome or not?
     {
         static void Main(string[] args)
         {
-            A a = new A();
+            Palindrom palindrom = new Palindrom();
 
-            Console.WriteLine("Write a word pls.\n");
-            a.str = Console.ReadLine();
+            Console.WriteLine("Write a string please.\n");
+            palindrom.str = Console.ReadLine();
             Console.WriteLine("\n");
 
-            if (a.ReverseStr1() == a.ReverseStr2())
-            {
-                Console.WriteLine("Palindrome");
-            }
+            if (palindrom.IsPalindrom() is true)
+                Console.WriteLine("Palindrom.");
             else
-            {
-                Console.WriteLine("Not palindrome.");
-            }
+                Console.WriteLine("Not palindrom.");
         }
 
-        public class A
+        public class Palindrom
         {
             public string str;
 
-            public string ReverseStr1()
-            {               
-                char[] charArray = str.ToCharArray();
-
-                for (int i = 0, j = str.Length - 1; i < j; i++, j--) // E.g. 123 --> 321, 121 --> 121
-                {
-                    charArray[i] = str[j];
-                    charArray[j] = str[i];
-                }
-
-                string reversedString = new string(charArray);
-                return reversedString;
-            }
-
-            public string ReverseStr2()
+            public bool IsPalindrom()
             {
-                char[] charArray = str.ToCharArray();
+                if (String.IsNullOrEmpty(str)) //Elimination of empty strings
+                    return false;
 
-                for (int i = 0, j = str.Length - 1; i < j; i++, j--) //Just one line e.g. 123 --> 121, 121 --> 121
+                str = str.Replace(" ", "").ToLower(); //Removing spaces and convert capital letters to lower case
+
+                for (int i = 0; i < str.Length / 2; i++)
                 {
-                    charArray[i] = str[j]; 
+                    if (str[i] != str[str.Length - 1])
+                        return false;
                 }
-
-                string reversedString = new string(charArray);
-                return reversedString;
+                return true;              
             }
         }
     }
