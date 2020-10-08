@@ -1,6 +1,7 @@
 ﻿//Write an array of characters and check that the first and last characters are equal.
 
 using System;
+using System.Linq;
 
 namespace STRING18
 {

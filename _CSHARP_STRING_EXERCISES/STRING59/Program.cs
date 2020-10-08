@@ -25,8 +25,8 @@ namespace STRING59 //How to reverse a string?
                     charArray[j] = _str[i];
                 }
 
-                string reversedstring = new string(charArray);
-                return reversedstring.ToString();
+                string reversedString = new string(charArray);
+                return reversedString.ToString();
             }
         }
     }
