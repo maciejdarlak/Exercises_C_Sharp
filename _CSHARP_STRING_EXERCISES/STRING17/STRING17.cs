@@ -1,6 +1,7 @@
 ﻿//Napisz tablicę znaków i zsumuj z niej liczby.
 
 using System;
+using System.Linq;
 
 //The key is to use (before the loop) the char.GetNumericValue () method to replace string with double.
 
