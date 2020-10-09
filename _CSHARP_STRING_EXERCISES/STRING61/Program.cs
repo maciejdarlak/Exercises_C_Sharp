@@ -13,33 +13,38 @@ namespace STRING61 //How to reverse each word in a given string?
             Console.WriteLine("Write a string please.");
             var str = Console.ReadLine();
 
-            stringToChange.ReversedString(str);
-            Console.WriteLine(stringToChange.words);
+            var result = stringToChange.ReversedString(str);
+            Console.WriteLine(result);
         }
 
-        public class StringToChange
+        public class StringToChange 
         {
             public string[] words;
 
-            public void ReversedString(string str)
+            public string[] ReversedString(string str) //Split a string into words
             {
                 words = str.Split();
 
                 foreach (var i in words)
-                {                   
-                    Console.WriteLine( ("{0}", i.Reverse()));
+                {
+                    Console.WriteLine("{0}", ReversedWord(i));
                 }
+
+                return words;
             }
 
-            public string ReversedWord(string wordToReverse)
+            public string ReversedWord(string wordToReverse) //Reverse order of letters in a specific word
             {
                 char[] reversedArray = wordToReverse.ToCharArray();
 
-                for (int i = 0, j = wordToReverse.Length; i < j; i++, j--)
+                Array.Reverse(reversedArray); /*Intead of:
+
+                for (int i = 0, j = wordToReverse.Length - 1; i < j; i++, j--)
                 {
                     reversedArray[i] = wordToReverse[j];
                     reversedArray[j] = wordToReverse[i];
                 }
+                */
 
                 string reversedString = new String(reversedArray);
                 return reversedString.ToString();
