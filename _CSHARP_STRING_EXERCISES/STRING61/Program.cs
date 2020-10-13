@@ -28,7 +28,7 @@ namespace STRING61 //How to reverse each word in a given string?
                 foreach (var i in words)
                 {
                     Console.WriteLine("{0}", ReversedWord(i));
-                }
+                }   
 
                 return words;
             }
