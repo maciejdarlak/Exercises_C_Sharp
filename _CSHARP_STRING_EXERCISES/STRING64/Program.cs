@@ -20,7 +20,7 @@ namespace STRING64 //How to find all possible substring of a given string?
             {
                 for (int i = 0; i < str.Length; i++)
                 {
-                    StringBuilder subString = new StringBuilder(str.Length - i); //Instead "dog" is "og" (amount without 1st character)
+                    StringBuilder subString = new StringBuilder(str.Length - i); //Max. capacity of the StringBuilder object (e.g. "dog" is 3 (3 - 0), then 2 etc)
 
                     for (int j = i; j < str.Length; j++)
                     {
