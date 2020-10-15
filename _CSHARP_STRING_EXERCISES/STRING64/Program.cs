@@ -18,11 +18,11 @@ namespace STRING64 //How to find all possible substring of a given string?
         {
             public void AllSubstrings(string str)
             {
-                for (int i = 0; i < str.Length; i++)
+                for (int i = 0; i < str.Length; i++) //d
                 {
                     StringBuilder subString = new StringBuilder(str.Length - i); //Max. capacity of the StringBuilder object (e.g. "dog" is 3 (3 - 0), then 2 etc)
 
-                    for (int j = i; j < str.Length; j++)
+                    for (int j = i; j < str.Length; j++) //d do dog
                     {
                         subString.Append(str[j]);
                         Console.Write(subString + " ");
