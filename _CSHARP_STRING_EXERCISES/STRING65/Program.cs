@@ -7,7 +7,7 @@ namespace STRING65
     {
         static void Main(string[] args)
         {
-            int[] array = new int[] {  1, 2, 3 };
+            int[] array = new int[] { 0, 1, 2 };
             A a = new A();
             a.RotateLeft(array);
             Console.WriteLine();
@@ -17,14 +17,13 @@ namespace STRING65
         {
             public void RotateLeft(int[] array)
             {
-                int size = array.Length;
                 int temp;
 
-                for (int j = size - 1; j > 0; j--)
+                for (int i = array.Length - 1; i > 0; i--) 
                 {
-                    temp = array[size - 1];
-                    array[array.Length - 1] = array[j - 1];
-                    array[j - 1] = temp;
+                    temp = array[array.Length - 1]; // X = A
+                    array[array.Length - 1] = array[i - 1]; // A = A-1
+                    array[i - 1] = temp; // A-1 = X
                 }
 
                 foreach (int num in array)
