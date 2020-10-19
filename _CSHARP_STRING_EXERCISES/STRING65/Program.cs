@@ -19,16 +19,16 @@ namespace STRING65
             {
                 int temp;
 
-                for (int i = array.Length - 1; i > 0; i--) 
+                for (int i = array.Length - 1; i > 0; i--)
                 {
                     temp = array[array.Length - 1]; // X = A
                     array[array.Length - 1] = array[i - 1]; // A = A-1
                     array[i - 1] = temp; // A-1 = X
                 }
 
-                foreach (int num in array)
+                foreach (int item in array)
                 {
-                    Console.Write(num + " ");
+                    Console.Write(item + " ");
                 }
             }
         }
