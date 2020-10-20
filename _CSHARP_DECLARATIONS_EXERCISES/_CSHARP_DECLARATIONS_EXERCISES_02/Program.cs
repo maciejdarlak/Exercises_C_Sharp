@@ -19,14 +19,14 @@ namespace _CSHARP_DECLARATIONS_EXERCISES_02 //How to find the sum of digits of a
 
         public class A
         {
-            public void DigitsAmount(int num)
+            public void DigitsAmount(int num) //num = 123
             {
                 int result = 0;
 
                 while (num > 0)
                 {
-                    result += num % 10;
-                    num /= 10;
+                    result += num % 10; //3 and leaves 120, 2 and leaves 10, 1 and leaves 0 (loop finish)
+                    num /= 10; // num/10 = 12, num/10 = 1,
                 }
 
                 Console.WriteLine(result);
