@@ -2,9 +2,9 @@
 
 using System;
 
-/*Robimy ze zdania tablcę słów.
-Porównujemy[0] z danym słowem.
-Zmieniamy wartość z logcznej na string.*/
+/* String is changed to an array of words.
+[0] is compared to the given word.
+The value is changed from logical to string. */
 
 namespace STRING05
 {
