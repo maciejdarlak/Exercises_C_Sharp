@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 
-namespace LINQ16
+namespace LINQ16 //Write a query that returns words at least 5 characters long and make them uppercase.
 {
-    class Program //Write a query that returns words at least 5 characters long and make them uppercase.
+    class Program 
     {
         static void Main(string[] args)
         {
