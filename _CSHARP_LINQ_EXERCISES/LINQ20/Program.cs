@@ -10,6 +10,7 @@ namespace LINQ20 //Write a query that returns only uppercase words from string.
         {
             string A = "DIVINE, beat, Cat";
             var bigLetterWords = A.Split(' ').Where(x => string.Equals(x, x.ToUpper()));
+
             foreach (var item in bigLetterWords)
             {
                 Console.WriteLine($"{item}");
