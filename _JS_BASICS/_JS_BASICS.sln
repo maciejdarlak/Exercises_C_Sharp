@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "_JS_BASICS", "_JS_BASICS\_JS_BASICS.njsproj", "{290C6009-493A-4C8F-82C1-519231067496}"
+EndProject
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "_JS_01", "_JS_01\_JS_01.njsproj", "{65913D73-D758-4790-9135-235C4FA59B40}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{290C6009-493A-4C8F-82C1-519231067496}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{290C6009-493A-4C8F-82C1-519231067496}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{290C6009-493A-4C8F-82C1-519231067496}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{290C6009-493A-4C8F-82C1-519231067496}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65913D73-D758-4790-9135-235C4FA59B40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65913D73-D758-4790-9135-235C4FA59B40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65913D73-D758-4790-9135-235C4FA59B40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65913D73-D758-4790-9135-235C4FA59B40}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6500C2D0-EAC6-454F-A4C8-442827A2583F}
+	EndGlobalSection
+EndGlobal
