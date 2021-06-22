@@ -18,15 +18,15 @@ namespace _CSHARP_COLLECTIONS_EXERCISES_04
             
             foreach (var item in result)
             {
-                Console.WriteLine(item.ToString());
+                Console.WriteLine(item);
             }
         }
 
         public class A 
         {
-            public int[] makeArray(int num, int length)
+            public int[] makeArray(int num, int length) 
             {
-                int[] arrayResult = new int[length];
+                int[] arrayResult = new int[length]; // An array is created.
 
                 arrayResult[0] = num;
 
@@ -35,7 +35,7 @@ namespace _CSHARP_COLLECTIONS_EXERCISES_04
                     arrayResult[i] += arrayResult[i - 1] + num;
                 }
 
-                return arrayResult;
+                return arrayResult; // This array is a result.
             }
         }
     }
