@@ -30,15 +30,15 @@ namespace STRING67
                 {
                     if (char.IsUpper(item)) 
                     {
-                        result += item.ToString().ToLower();
+                        result += item.ToString().ToLower(); // Added a changed char to string.
                     }
                     if (char.IsLower(item))
                     {
-                        result += item.ToString().ToUpper();
+                        result += item.ToString().ToUpper(); // Added a changed char to string.
                     }
                     if (!char.IsUpper(item) && !char.IsLower(item))
                     {
-                        result += item.ToString();
+                        result += item.ToString(); // Added a other sign to string.
                     }
                 }
                 return result;
