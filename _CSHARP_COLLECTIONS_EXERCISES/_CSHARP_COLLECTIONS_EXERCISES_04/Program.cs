@@ -7,7 +7,7 @@ using System.Collections.Generic;
     ArrayOfMultiples(12, 10) ➞ [12, 24, 36, 48, 60, 72, 84, 96, 108, 120]
     ArrayOfMultiples(17, 6) ➞ [17, 34, 51, 68, 85, 102]  */
 
-namespace _CSHARP_COLLECTIONS_EXERCISES_04
+namespace _CSHARP_COLLECTIONS_EXERCISES_04 
 {
     class Program
     {
@@ -15,8 +15,6 @@ namespace _CSHARP_COLLECTIONS_EXERCISES_04
         {
             A a = new A();            
             var result = a.makeArray(7, 5);
-
-            Console.WriteLine(result[1]);
             
             foreach (var item in result)
             {
@@ -26,24 +24,19 @@ namespace _CSHARP_COLLECTIONS_EXERCISES_04
 
         public class A 
         {
-            int num;
-            int length;
-
-            int[] arrayResult = new int[length];
-
             public int[] makeArray(int num, int length)
             {
-                
+                int[] arrayResult = new int[length];
 
-                for (int i = 0; i < length; i++)
+                arrayResult[0] = num;
+
+                for (int i = 1; i < length; i++)
                 {
-                    arrayResult[i] += num;
+                    arrayResult[i] += arrayResult[i - 1] + num;
                 }
 
                 return arrayResult;
             }
-
-
         }
     }
 }
