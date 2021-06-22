@@ -36,9 +36,9 @@ namespace STRING67
                     {
                         result += item.ToString().ToUpper(); // Added a changed char to string.
                     }
-                    if (!char.IsUpper(item) && !char.IsLower(item))
+                    else
                     {
-                        result += item.ToString(); // Added a other sign to string.
+                        result += item; // Added a other sign to string.
                     }
                 }
                 return result;
